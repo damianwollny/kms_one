@@ -33,8 +33,6 @@ function drawgame(point_quant){
         drawpoint(30*(j), 30*(j), "grey");
         point_counter++
     }
-    //drawpoint(60, 100, "orange");
-    //drawpoint(60, 60, "blue");
     drawnum();
 }
 
@@ -54,8 +52,6 @@ function drawnum(){
 // remove all points (draw only background)
 function clearscreen(){
     ctx.fillStyle = "white";
-    //ctx.canvas.width  = window.innerWidth;
-    //ctx.canvas.height = window.innerHeight;
     ctx.fillRect(0,0,1000,1000)
 }
 
@@ -77,12 +73,5 @@ function compare(){
 }
 
 drawgame(4);
-
-// TO DO:
-// - placing of dots
-// - replace canvas by grid??
-// - game loop (1-9?)
-// - beautify
-// - time component
 
 

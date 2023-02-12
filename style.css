@@ -12,11 +12,10 @@ body {
 }
 .grid > div {
     border-radius: 20px;
-    /*background: #eee;*/
     border: 1px solid black;
 }
-.container {
-    border: 3px solid green;
+.point_container {
+    background-color: antiquewhite;
 }
 canvas {    
     border-radius: 20px;
@@ -31,9 +30,7 @@ canvas {
     border-radius: 20px;
     border: 1px solid black;
 }
-/*#test{
-    border: 10px solid green;
-}*/
+
 #number{
     align-self: center;
     justify-self: right;
