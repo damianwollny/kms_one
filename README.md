@@ -1,8 +1,9 @@
 # kms_one
 
 TO DO:
-- placing of dots
-- replace canvas by grid??
-- game loop (1-9?)
+- css: grid sizes not fixed -> circles become ellipses
+- css: nested grid is glued to the right
+- js: replace canvas logic with css manipulation
+- game loop: which grid dots do you color when
 - beautify
 - time component

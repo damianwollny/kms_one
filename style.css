@@ -15,12 +15,16 @@ body {
     border: 1px solid black;
 }
 .point_container {
-    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color:beige;
 }
-canvas {    
-    border-radius: 20px;
-    border: 2px solid black
+
+.point_container > div {
+    border: solid 1px black;
+    border-radius: 50%;
 }
+
 .nested {
     display: grid;
     grid-template-columns: 2fr 1fr;

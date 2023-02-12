@@ -1,11 +1,12 @@
-const canvas = document.getElementById("points");
-const ctx = canvas.getContext("2d");
+//const canvas = document.getElementById("points");
+//const ctx = canvas.getContext("2d");
 const container = document.getElementById("container");
 let number = document.getElementById("number");
 let radius = 15;
 let correct = false;
 let wrong = false;
 let point_counter = 0;
+
 document.getElementById("correct").addEventListener("click", correct_click);
 document.getElementById("wrong").addEventListener("click", wrong_click);
 
@@ -35,7 +36,7 @@ function drawgame(point_quant){
     }
     drawnum();
 }
-
+drawnum();
 // draw number (on canvas) in symbolic form
 function drawpoint(x,y, circ_color){
     ctx.fillStyle = circ_color;
@@ -46,7 +47,7 @@ function drawpoint(x,y, circ_color){
 
 // draw number in written form
 function drawnum(){
-    num = number.textContent += 3;
+    num = number.textContent += 4;
 }
 
 // remove all points (draw only background)
