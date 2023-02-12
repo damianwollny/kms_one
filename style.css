@@ -1,0 +1,50 @@
+h1 {
+    font-family: Helvetica;
+}
+body {
+    overflow: hidden;
+    text-align: center;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+}
+.grid > div {
+    border-radius: 20px;
+    /*background: #eee;*/
+    border: 1px solid black;
+}
+.container {
+    border: 3px solid green;
+}
+canvas {    
+    border-radius: 20px;
+    border: 2px solid black
+}
+.nested {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: 1px solid black;
+}
+.nested > div {
+    border-radius: 20px;
+    border: 1px solid black;
+}
+/*#test{
+    border: 10px solid green;
+}*/
+#number{
+    align-self: center;
+    justify-self: right;
+    font-size: 124pt;
+    font-family: Helvetica;
+}
+
+#correct{
+    background: rgb(198, 231, 198);
+}
+
+#wrong{
+    background: rgb(250, 214, 214);
+}
