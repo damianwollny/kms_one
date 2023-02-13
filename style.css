@@ -45,10 +45,11 @@ body {
 
 .nested {
     display: grid;
-    grid-template-columns: 100px 60px;
-    width: 160px;
+    grid-template-columns: 100px;
+    width: 100px;
     border: 1px solid black;
     justify-self: left;
+    gap: 5px;
 }
 .nested > div {
     border-radius: 20px;
@@ -69,4 +70,8 @@ body {
 
 #wrong{
     background: rgb(250, 214, 214);
+}
+
+.arrow {
+    font-size: 60px;
 }
