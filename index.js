@@ -26,24 +26,6 @@ function wrong_click(){
     print_output()
 }
 
-// draw points on canvas
-function drawgame(point_quant){
-    clearscreen();
-    // 
-    for (let j = 1; j <= point_quant; j++) {
-        drawpoint(30*(j), 30*(j), "grey");
-        point_counter++
-    }
-    drawnum();
-}
-// draw number (on canvas) in symbolic form
-function drawpoint(x,y, circ_color){
-    ctx.fillStyle = circ_color;
-    ctx.beginPath();
-    ctx.arc(x,y, radius, 0, Math.PI * 2);
-    ctx.fill();
-}
-
 // draw number in written form
 function drawnum(amount){
     num = number.textContent += amount;
