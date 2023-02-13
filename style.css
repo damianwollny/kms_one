@@ -4,12 +4,17 @@ h1 {
 body {
     overflow: hidden;
     text-align: center;
+    /* aligning the grid container in the center:*/
+    width:480px;
+    margin-left:auto;
+    margin-right:auto;
 }
 .grid {
     display: grid;
-    /*grid-template-columns: repeat(3, 1fr);*/
     grid-auto-flow: column;
-    grid-column-gap: 1em;
+    grid-column-gap: 20px;
+    /* 480 = sum(number, point_container, nested) */
+    width: 480px;
 }
 .grid > div {
     border-radius: 20px;
@@ -18,7 +23,8 @@ body {
 .point_container {
     display: grid;
     grid-template-columns: repeat(3, 60px);
-    width: 180px;
+    width: 190px;
+    gap: 5px;
     background-color:beige;
 }
 
@@ -46,6 +52,7 @@ body {
     justify-self: right;
     font-size: 124pt;
     font-family: Helvetica;
+    width: 100px;
 }
 
 #correct{
