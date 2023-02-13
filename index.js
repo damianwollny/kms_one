@@ -36,7 +36,6 @@ function drawgame(point_quant){
     }
     drawnum();
 }
-drawnum();
 // draw number (on canvas) in symbolic form
 function drawpoint(x,y, circ_color){
     ctx.fillStyle = circ_color;
@@ -72,7 +71,5 @@ function compare(){
         alert("FALSCH!")
     }
 }
-
+drawnum();
 drawgame(4);
-
-
