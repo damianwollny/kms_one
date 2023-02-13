@@ -28,8 +28,16 @@ body {
     background-color:beige;
 }
 
-.point_container > div {
-    border: solid 1px black;
+.empty_point {
+    border: solid 1px grey;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.fill_point {
+    border: solid 1px grey;
+    background-color: black;
     border-radius: 50%;
     width: 60px;
     height: 60px;

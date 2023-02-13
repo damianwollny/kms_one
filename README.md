@@ -1,7 +1,8 @@
 # kms_one
 
 TO DO:
-- js: replace canvas logic with css manipulation
-- game loop: which grid dots do you color when
+- game loop: continue loop upon click
 - beautify
+- randomize dot position
+- add colors to dots
 - time component
