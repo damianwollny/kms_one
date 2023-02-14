@@ -1,5 +1,5 @@
 h1 {
-    font-family: Helvetica;
+    color: #4c4c4c; font-family: 'Lato', sans-serif; font-size: 40px; font-weight: 200; line-height: 58px; margin: 0 0 20px;
 }
 body {
     overflow: hidden;
@@ -8,6 +8,8 @@ body {
     width:480px;
     margin-left:auto;
     margin-right:auto;
+    /* background-color: #ED6160;*/
+    background-color: rgb(242, 242, 242);
 }
 .grid {
     display: grid;
@@ -18,32 +20,32 @@ body {
 }
 .grid > div {
     border-radius: 20px;
-    border: 1px solid black;
+    border: 7px solid white;
+    font-family: 'Lato', sans-serif;;
+    background-color: rgb(255, 246, 229);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .point_container {
     display: grid;
     grid-template-columns: repeat(3, 60px);
     width: 190px;
     gap: 5px;
-    background-color:beige;
 }
 
 .empty_point {
-    border: solid 1px grey;
     border-radius: 50%;
     width: 60px;
     height: 60px;
 }
 
 .fill_point {
-    border: solid 1px grey;
-    background-color: black;
+    background-color:cadetblue;
     border-radius: 50%;
     width: 60px;
     height: 60px;
 }
 
-.nested {
+.arrow_container {
     display: grid;
     grid-template-columns: 100px;
     width: 100px;
@@ -51,16 +53,15 @@ body {
     justify-self: left;
     gap: 5px;
 }
-.nested > div {
+.arrow_container > div {
     border-radius: 20px;
-    border: 1px solid black;
 }
 
 #number{
     align-self: center;
     justify-self: right;
     font-size: 124pt;
-    font-family: Helvetica;
+    font-family: 'Lato', sans-serif;
     width: 100px;
 }
 
@@ -72,6 +73,24 @@ body {
     background: rgb(250, 214, 214);
 }
 
+/* --- arrows --- */
 .arrow {
     font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+[class^=arr-]{
+    border:       solid currentColor;
+    border-width: 0 .1em .1em 0;
+    display:      inline-block;
+    padding:      .20em;
+  }
+.arr-up {
+    transform:rotate(-135deg);
+    color: rgb(69, 88, 69);
+}
+.arr-down {
+    transform:rotate(45deg);
+    color: rgb(88, 74, 74);
 }

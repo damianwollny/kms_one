@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="title">Level: 1</h1>
+    <h1 id="title">LEVEL: 1</h1>
     <!-- Grid surounding the whole game-->
     <div class="grid">
         <div id="number"></div>
@@ -23,10 +23,12 @@
             <div class="empty_point", id="8"></div>
             <div class="empty_point", id="9"></div>
         </div>
-        <div class="nested">
-            <div class="arrow" id="correct">&#8593</div>
-            <div class="arrow" id="wrong">&#8595</div>
+        <div class="arrow_container">
+            <div class="arrow" id="correct"><i class="arr-up"></i></div>
+            <div class="arrow" id="wrong"><i class="arr-down"></i></div>
         </div>
+    </div>
+    <div id="time result">
     </div>
     <script src="index.js"></script>
 </body>

@@ -1,3 +1,4 @@
+// global variables
 const container = document.getElementById("container");
 let number = document.getElementById("number");
 let radius = 15;
@@ -8,7 +9,7 @@ let glob_rep = 1;
 let point_counter = 0;
 let num = 1;
 
-// Event listeners
+// event listeners
 document.getElementById("correct").addEventListener("click", correct_click);
 document.getElementById("wrong").addEventListener("click", wrong_click);
 document.body.addEventListener("keydown", keyDown);
@@ -34,7 +35,6 @@ function keyDown(event) {
         wrong = false
         compare();
     }
-  
     //down
     if (event.keyCode == 40) {
         correct = false
@@ -48,7 +48,6 @@ function keyUp(event) {
       correct = false;
       wrong = false;
     }
-  
     //down
     if (event.keyCode == 40) {
         correct = false;
@@ -86,18 +85,18 @@ function compare(){
     if (num==point_counter & correct == true) {
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
-        if (glob_rep == 4) {
+        if (glob_rep == 5) {
             glob_level = ++glob_level
-            document.getElementById("title").innerHTML = "Level: " + glob_level
+            document.getElementById("title").innerHTML = "LEVEL: " + glob_level
             glob_rep = 1
         }
         level_up_down(glob_level, glob_rep);
     }else if(num!=point_counter & wrong == true){
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
-        if (glob_rep == 4) {
+        if (glob_rep == 5) {
             glob_level = ++glob_level
-            document.getElementById("title").innerHTML = "Level: " + glob_level
+            document.getElementById("title").innerHTML = "LEVEL: " + glob_level
             glob_rep = 1
         }
         level_up_down(glob_level, glob_rep);
@@ -105,7 +104,7 @@ function compare(){
         alert("LEIDER FALSCH!");
         glob_rep = 1;
         glob_level = 1;
-        document.getElementById("title").innerHTML = "Level: 1"
+        document.getElementById("title").innerHTML = "LEVEL: 1"
         level_up_down(glob_level, glob_rep);
     }
 }
