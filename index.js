@@ -1,5 +1,3 @@
-//const canvas = document.getElementById("points");
-//const ctx = canvas.getContext("2d");
 const container = document.getElementById("container");
 let number = document.getElementById("number");
 let radius = 15;
@@ -10,21 +8,52 @@ let glob_rep = 1;
 let point_counter = 0;
 let num = 1;
 
+// Event listeners
 document.getElementById("correct").addEventListener("click", correct_click);
 document.getElementById("wrong").addEventListener("click", wrong_click);
+document.body.addEventListener("keydown", keyDown);
+document.body.addEventListener("keyup", keyUp);
 
-// react to clicking: correct
+// react to clicking
 function correct_click(){
     correct = true
     wrong = false
     compare();
 }
-
-// react to clicking: correct
 function wrong_click(){
     correct = false
     wrong = true
     compare();
+}
+
+// react to keys
+function keyDown(event) {
+    //up
+    if (event.keyCode == 38) {
+        correct = true
+        wrong = false
+        compare();
+    }
+  
+    //down
+    if (event.keyCode == 40) {
+        correct = false
+        wrong = true
+        compare();
+    }
+}
+function keyUp(event) {
+    //up
+    if (event.keyCode == 38) {
+      correct = false;
+      wrong = false;
+    }
+  
+    //down
+    if (event.keyCode == 40) {
+        correct = false;
+        wrong = false;
+    }
 }
 
 // draw number in written form
