@@ -5,5 +5,6 @@ TO DO:
 - randomize dot position
 - add colors to dots
 - time component
+- start button
+- winning/losing visual effect: replace alerts
 - "better" initialization of game
-- refactor code
