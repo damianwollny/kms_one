@@ -80,13 +80,14 @@ function drawpoints(amount){
 
 // comparison
 function compare(){
-    console.log("counter=",glob_level, glob_rep)
-    console.log("number/points=",num, point_counter)
     if (num==point_counter & correct == true) {
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
         if (glob_rep == 5) {
             glob_level = ++glob_level
+            if (glob_level == 4) {
+                restart_game("SUPER!")
+            }
             document.getElementById("title").innerHTML = "LEVEL: " + glob_level
             glob_rep = 1
         }
@@ -96,17 +97,25 @@ function compare(){
         glob_rep = ++glob_rep
         if (glob_rep == 5) {
             glob_level = ++glob_level
+            if (glob_level == 4) {
+                restart_game("SUPER!")
+            }
             document.getElementById("title").innerHTML = "LEVEL: " + glob_level
             glob_rep = 1
         }
         level_up_down(glob_level, glob_rep);
     }else{
-        alert("LEIDER FALSCH!");
-        glob_rep = 1;
-        glob_level = 1;
-        document.getElementById("title").innerHTML = "LEVEL: 1"
-        level_up_down(glob_level, glob_rep);
+        restart_game("LEIDER FALSCH!");
     }
+}
+
+// restart game
+function restart_game(alert_text){
+    alert(alert_text);
+    glob_level = 1;
+    glob_rep = 1;
+    document.getElementById("title").innerHTML = "LEVEL: 1";
+    level_up_down(glob_level, glob_rep);
 }
 
 
