@@ -11,6 +11,8 @@ body {
     /* background-color: #ED6160;*/
     background-color: rgb(242, 242, 242);
 }
+
+/* --- overall grid --- */
 .grid {
     display: grid;
     grid-auto-flow: column;
@@ -25,26 +27,34 @@ body {
     background-color: rgb(255, 246, 229);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+/* --- points --- */
 .point_container {
     display: grid;
     grid-template-columns: repeat(3, 60px);
     width: 190px;
     gap: 5px;
 }
-
 .empty_point {
     border-radius: 50%;
     width: 60px;
     height: 60px;
 }
-
 .fill_point {
     background-color:cadetblue;
     border-radius: 50%;
     width: 60px;
     height: 60px;
 }
+#number{
+    align-self: center;
+    justify-self: right;
+    font-size: 124pt;
+    font-family: 'Lato', sans-serif;
+    width: 100px;
+}
 
+/* --- arrows --- */
 .arrow_container {
     display: grid;
     grid-template-columns: 100px;
@@ -56,24 +66,6 @@ body {
 .arrow_container > div {
     border-radius: 20px;
 }
-
-#number{
-    align-self: center;
-    justify-self: right;
-    font-size: 124pt;
-    font-family: 'Lato', sans-serif;
-    width: 100px;
-}
-
-#correct{
-    background: rgb(198, 231, 198);
-}
-
-#wrong{
-    background: rgb(250, 214, 214);
-}
-
-/* --- arrows --- */
 .arrow {
     font-size: 40px;
     display: flex;
@@ -93,4 +85,10 @@ body {
 .arr-down {
     transform:rotate(45deg);
     color: rgb(166, 123, 123);
+}
+#correct{
+    background: rgb(198, 231, 198);
+}
+#wrong{
+    background: rgb(250, 214, 214);
 }
