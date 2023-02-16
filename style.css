@@ -88,9 +88,9 @@ body {
   }
 .arr-up {
     transform:rotate(-135deg);
-    color: rgb(69, 88, 69);
+    color: rgb(107, 148, 107);
 }
 .arr-down {
     transform:rotate(45deg);
-    color: rgb(106, 74, 74);
+    color: rgb(166, 123, 123);
 }
