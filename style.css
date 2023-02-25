@@ -31,8 +31,8 @@ body {
 /* --- points --- */
 .point_container {
     display: grid;
-    grid-template-columns: repeat(3, 60px);
-    width: 190px;
+    grid-template-columns: repeat(4, 60px);
+    width: 255px;
     gap: 5px;
 }
 .empty_point {
