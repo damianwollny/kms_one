@@ -62,7 +62,7 @@ function drawnum(amount){
 
 // clear all 9 points
 function clearpoints(){
-    for (let elem = 1; elem <= 9; elem++) {
+    for (let elem = 1; elem <= 16; elem++) {
         let point_element = document.getElementById(elem);
         point_element.className = 'empty_point';
     }
@@ -71,7 +71,12 @@ function clearpoints(){
 // draw points
 function drawpoints(amount){
     clearpoints();
-    for (let elem = 1; elem <= amount; elem++) {
+    // pick random startpoint in grid
+    rnd_start = Math.floor(Math.random() * (16-amount)) + 1;
+    console.log("rnd_start=",rnd_start)
+    console.log("amount=",amount)
+    for (let elem = rnd_start; elem < rnd_start+amount; elem++) {
+        console.log("elem=",elem)
         let point_element = document.getElementById(elem);
         point_element.className = 'fill_point';
         point_counter=amount;
