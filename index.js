@@ -100,7 +100,7 @@ function compare(){
     }else if(num!=point_counter & wrong == true){
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
-        if (glob_rep == 5) {
+        if (glob_rep == 8) {
             glob_level = ++glob_level
             if (glob_level == 4) {
                 restart_game("SUPER!")
