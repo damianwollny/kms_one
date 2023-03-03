@@ -9,7 +9,7 @@ body {
     margin-left:auto;
     margin-right:auto;
     /* background-color: #ED6160;*/
-    background-color: rgb(242, 242, 242);
+    background-color: white
 }
 
 /* --- overall grid --- */
@@ -22,10 +22,11 @@ body {
 }
 .grid > div {
     border-radius: 20px;
-    border: 7px solid white;
+    border: #4c4c4c 1px dotted;
     font-family: 'Lato', sans-serif;;
-    background-color: rgb(255, 246, 229);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    
 }
 
 /* --- points --- */
