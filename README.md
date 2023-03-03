@@ -1,8 +1,8 @@
 # kms_one
 
 TO DO:
-- add colors to dots
+- change css style (colors)
 - time component
+- change arrows to x and checkmark
 - winning/losing visual effect: replace alerts
-- start button
 - clean this mess up

@@ -40,8 +40,32 @@ body {
     width: 60px;
     height: 60px;
 }
-.fill_point {
+.fill_point{
     background-color:cadetblue;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.fill_point[id="1"], .fill_point[id="2"], .fill_point[id="3"], .fill_point[id="4"]{
+    background-color: #f16a70;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.fill_point[id="5"], .fill_point[id="6"], .fill_point[id="7"], .fill_point[id="8"]{
+    background-color: #b1d877;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.fill_point[id="9"], .fill_point[id="10"], .fill_point[id="11"], .fill_point[id="12"]{
+    background-color: #8cdcda;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.fill_point[id="13"], .fill_point[id="14"], .fill_point[id="15"], .fill_point[id="16"]{
+    background-color: #4d4d4d;
     border-radius: 50%;
     width: 60px;
     height: 60px;
