@@ -75,10 +75,7 @@ function drawpoints(amount){
     clearpoints();
     // pick random startpoint in grid
     rnd_start = Math.floor(Math.random() * (16-amount)) + 1;
-    console.log("rnd_start=",rnd_start)
-    console.log("amount=",amount)
     for (let elem = rnd_start; elem < rnd_start+amount; elem++) {
-        console.log("elem=",elem)
         let point_element = document.getElementById(elem);
         point_element.className = 'fill_point';
         point_counter=amount;
@@ -90,7 +87,7 @@ function compare(){
     if (num==point_counter & correct == true) {
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
-        if (glob_rep == 8) {
+        if (glob_rep == 3) {
             glob_level = ++glob_level
             if (glob_level == 4) {
                 restart_game("SUPER!")
@@ -102,16 +99,16 @@ function compare(){
     }else if(num!=point_counter & wrong == true){
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
-        if (glob_rep == 8) {
+        if (glob_rep == 3) {
             glob_level = ++glob_level
             if (glob_level == 4) {
-                //restart_game("SUPER!")
-                restart_game();
+                measuretime();
+                restart_game()
             }
             document.getElementById("title").innerHTML = "LEVEL: " + glob_level
             glob_rep = 1
         }
-        measuretime()
+        measuretime();
         level_up_down(glob_level, glob_rep);
     }else{
         restart_game("LEIDER FALSCH!");
@@ -122,19 +119,19 @@ function compare(){
 function measuretime(){
     if (glob_level == 1 & glob_rep == 2) {
         t0 = performance.now();
-        console.log("start = ", t0)
     }else if (glob_level == 4) {
         t1 = performance.now();
         console.log("end = ", t1)
         console.log("start = ", t0)
-        alert(Math.round((t1 - t0)/1000) + " Sekunden");
-
+        alert("SUPER! " + Math.round((t1 - t0)/1000) + " Sekunden");
     }
 }
 
 // restart game
-function restart_game(){
-    measuretime();
+function restart_game(alert_text){
+    if (glob_level < 4) {
+        alert(alert_text);
+    }
     glob_level = 1;
     glob_rep = 1;
     document.getElementById("title").innerHTML = "LEVEL: 1";
@@ -167,7 +164,6 @@ function level_up_down(a_level, b_rep){
 function init() {
     drawnum(num);
     drawpoints(1);
-    console.log(glob_level, glob_rep)
 }
 
 init();
