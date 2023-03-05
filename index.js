@@ -8,6 +8,8 @@ let glob_level = 1;
 let glob_rep = 1;
 let point_counter = 0;
 let num = 1;
+var t0 = 0;
+var t1 = 0;
 
 // event listeners
 document.getElementById("correct").addEventListener("click", correct_click);
@@ -88,7 +90,7 @@ function compare(){
     if (num==point_counter & correct == true) {
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
-        if (glob_rep == 5) {
+        if (glob_rep == 8) {
             glob_level = ++glob_level
             if (glob_level == 4) {
                 restart_game("SUPER!")
@@ -103,20 +105,36 @@ function compare(){
         if (glob_rep == 8) {
             glob_level = ++glob_level
             if (glob_level == 4) {
-                restart_game("SUPER!")
+                //restart_game("SUPER!")
+                restart_game();
             }
             document.getElementById("title").innerHTML = "LEVEL: " + glob_level
             glob_rep = 1
         }
+        measuretime()
         level_up_down(glob_level, glob_rep);
     }else{
         restart_game("LEIDER FALSCH!");
     }
 }
 
+// measure time
+function measuretime(){
+    if (glob_level == 1 & glob_rep == 2) {
+        t0 = performance.now();
+        console.log("start = ", t0)
+    }else if (glob_level == 4) {
+        t1 = performance.now();
+        console.log("end = ", t1)
+        console.log("start = ", t0)
+        alert(Math.round((t1 - t0)/1000) + " Sekunden");
+
+    }
+}
+
 // restart game
-function restart_game(alert_text){
-    alert(alert_text);
+function restart_game(){
+    measuretime();
     glob_level = 1;
     glob_rep = 1;
     document.getElementById("title").innerHTML = "LEVEL: 1";
@@ -148,7 +166,8 @@ function level_up_down(a_level, b_rep){
 // initialize game
 function init() {
     drawnum(num);
-    drawpoints(1);    
+    drawpoints(1);
+    console.log(glob_level, glob_rep)
 }
 
 init();
