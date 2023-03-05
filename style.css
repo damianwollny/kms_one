@@ -85,6 +85,7 @@ body {
 .arrow_container {
     display: grid;
     grid-template-columns: 100px;
+    grid-template-rows: 130px;
     width: 100px;
     border: 1px solid black;
     justify-self: left;
@@ -94,23 +95,22 @@ body {
     border-radius: 20px;
 }
 .arrow {
-    font-size: 40px;
+    font-size: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-[class^=arr-]{
-    border:       solid currentColor;
-    border-width: 0 .1em .1em 0;
-    display:      inline-block;
-    padding:      .20em;
-  }
-.arr-up {
-    transform:rotate(-135deg);
-    color: rgb(107, 148, 107);
+.arr-up{
+    display: inline-block;
+    transform: rotate(35deg);
+    height: 20px;
+    width: 8px;
+    border-bottom: 4px solid rgb(107, 148, 107);
+    border-right: 4px solid rgb(107, 148, 107);
 }
-.arr-down {
-    transform:rotate(45deg);
+.arr-down:after{
+    display: inline-block;
+    content: "\00d7";
     color: rgb(166, 123, 123);
 }
 #correct{
