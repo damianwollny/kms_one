@@ -48,25 +48,25 @@ body {
     height: 60px;
 }
 .fill_point[id="1"], .fill_point[id="2"], .fill_point[id="3"], .fill_point[id="4"]{
-    background-color: #f16a70;
+    background-color: #ed826f;
     border-radius: 50%;
     width: 60px;
     height: 60px;
 }
 .fill_point[id="5"], .fill_point[id="6"], .fill_point[id="7"], .fill_point[id="8"]{
-    background-color: #b1d877;
+    background-color: #f6d55c;
     border-radius: 50%;
     width: 60px;
     height: 60px;
 }
 .fill_point[id="9"], .fill_point[id="10"], .fill_point[id="11"], .fill_point[id="12"]{
-    background-color: #8cdcda;
+    background-color: #3caea3;
     border-radius: 50%;
     width: 60px;
     height: 60px;
 }
 .fill_point[id="13"], .fill_point[id="14"], .fill_point[id="15"], .fill_point[id="16"]{
-    background-color: #4d4d4d;
+    background-color: #20639b;
     border-radius: 50%;
     width: 60px;
     height: 60px;
