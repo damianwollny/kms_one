@@ -10,6 +10,7 @@ let point_counter = 0;
 let num = 1;
 var t0 = 0;
 var t1 = 0;
+var progress_counter = 0;
 
 // event listeners
 document.getElementById("correct").addEventListener("click", correct_click);
@@ -88,25 +89,30 @@ function compare(){
     if (num==point_counter & correct == true) {
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
+        progress_counter++
+        console.log("prog = ", progress_counter)
+        document.getElementById("p" + progress_counter).style.backgroundColor = "lightgreen";
         if (glob_rep == 3) {
             glob_level = ++glob_level
             if (glob_level == 4) {
+                measuretime();
                 restart_game("SUPER!")
             }
-            document.getElementById("title").innerHTML = "LEVEL: " + glob_level
             glob_rep = 1
         }
         level_up_down(glob_level, glob_rep);
     }else if(num!=point_counter & wrong == true){
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
+        progress_counter++
+        console.log("prog = ", progress_counter)
+        document.getElementById("p" + progress_counter).style.backgroundColor = "lightgreen";
         if (glob_rep == 3) {
             glob_level = ++glob_level
             if (glob_level == 4) {
                 measuretime();
                 restart_game()
             }
-            document.getElementById("title").innerHTML = "LEVEL: " + glob_level
             glob_rep = 1
         }
         measuretime();
@@ -135,7 +141,12 @@ function restart_game(alert_text){
     }
     glob_level = 1;
     glob_rep = 1;
-    document.getElementById("title").innerHTML = "LEVEL: 1";
+    progress_counter = 0;
+    // clear progress bars
+    for (let p = 1; p <= 6; p++) {
+        document.getElementById("p" + p).style.backgroundColor = "white";
+    }
+
     level_up_down(glob_level, glob_rep);
 }
 

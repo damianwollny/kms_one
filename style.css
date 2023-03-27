@@ -12,6 +12,21 @@ body {
     background-color: white
 }
 
+/* --- progress grid --- */
+.progress_container {
+    display: grid;
+    grid-template-columns: repeat(6, 80px);
+    width: 540px;
+    height: 30px;
+    padding: 20px;
+    gap: 5px;
+}
+.progress_item {
+    display: grid;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
 /* --- overall grid --- */
 .grid {
     display: grid;
