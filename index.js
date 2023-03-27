@@ -84,10 +84,11 @@ function drawpoints(amount){
 
 // comparison
 function compare(){
+    console.log(point_counter)
     if (num==point_counter & correct == true) {
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
-        if (glob_rep == 6) {
+        if (glob_rep == 3) {
             glob_level = ++glob_level
             if (glob_level == 4) {
                 restart_game("SUPER!")
@@ -99,7 +100,7 @@ function compare(){
     }else if(num!=point_counter & wrong == true){
         //alert("RICHTIG!");
         glob_rep = ++glob_rep
-        if (glob_rep == 6) {
+        if (glob_rep == 3) {
             glob_level = ++glob_level
             if (glob_level == 4) {
                 measuretime();
